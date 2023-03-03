@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+
+<!--  -->
+<!--&lt;!&ndash; servlet declaretion  &ndash;&gt;-->
+  <servlet>
+    <servlet-name>first</servlet-name>
+    <servlet-class>com.servlet.FirstServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>second</servlet-name>
+    <servlet-class>com.servlet.ServletUsingGeneric</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>third</servlet-name>
+    <servlet-class>com.servlet.HttpServlets</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.servlet.RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>first</servlet-name>
+    <url-pattern>/first</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>second</servlet-name>
+    <url-pattern>/second</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>third</servlet-name>
+    <url-pattern>/third</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <filter>
+    <filter-name>filter1</filter-name>
+    <filter-class>com.servlet.MyFilter</filter-class>
+  </filter>
+
+  <!--  filter mapping-->
+  <filter-mapping>
+    <filter-name>filter1</filter-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </filter-mapping>
+
+</web-app>
